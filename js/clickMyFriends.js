@@ -9,7 +9,7 @@ var toggleBtn = document.getElementById("toggleBtn");
 /* Add event listener on Image Click & Button Click */
 
 for (i=0; i < clickImages.length; i++) {
-    clickImages[i].addEventListener("click",addClickCounter)
+    clickImages[i].addEventListener("click",addClickCounter);
 }
 toggleBtn.addEventListener("click",toggleTime);
 
@@ -49,10 +49,13 @@ function toggleTime() {
 
 // Add number of clicks on the Impage
 //this.setAttribute("onclick", "disable");
-//this.onclick = "null"; // Added to make the disable the image click to get unique count
+// this.disable='true';
+//this.onclick = "null"; // Added to make the disable the image click to get unique coun
 
 function addClickCounter () {
        addClick++; 
-       this.setAttribute("onclick", "null");
+       this.onclick=null; // Added to make onclick disable the image click to get unique count
     console.log ("You have clicked this many times :" +addClick);
 }
+
+
